@@ -8,4 +8,4 @@
 (library
  (name impcore)
  (modules lexer parser)
- (libraries core_unix menhirLib))
+ (libraries menhirLib))
