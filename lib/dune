@@ -1,2 +1,11 @@
+(ocamllex
+  (modules lexer))
+
+(menhir
+  (modules parser)
+  (flags --table --strict))
+
 (library
- (name impcore))
+ (name impcore)
+ (modules lexer parser)
+ (libraries core_unix menhirLib))
