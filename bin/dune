@@ -1,4 +1,6 @@
 (executable
  (public_name impcore)
  (name main)
- (libraries impcore))
+ (libraries core_unix core_unix.filename_unix core_unix.command_unix stdio impcore)
+ (preprocess
+  (pps ppx_jane)))
