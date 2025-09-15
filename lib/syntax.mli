@@ -1,5 +1,5 @@
 type name = string
-type value = int
+type value = Int of int | Array of value array
 
 type def =
   | Val of (name * exp)
@@ -14,3 +14,5 @@ and exp =
   | While of (exp * exp)
   | Begin of exp list
   | Apply of (name * exp list)
+
+and func = UserDef of name list * exp | Primitive of (value list -> value)
