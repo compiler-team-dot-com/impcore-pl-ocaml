@@ -7,5 +7,5 @@
 
 (library
  (name impcore)
- (modules lexer parser syntax)
+ (modules lexer parser syntax names env)
  (libraries menhirLib))
